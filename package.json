@@ -1,0 +1,39 @@
+{
+  "name": "mememe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:sortabrilliant/mememe.git",
+  "author": "sortabrilliant",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@wordpress/eslint-plugin": "^3.1.0",
+    "@wordpress/scripts": "6.1.1",
+    "cross-env": "^5.2.1",
+    "eslint": "^6.5.1",
+    "laravel-mix": "^4.0.16",
+    "live-server": "^1.2.1",
+    "resolve-url-loader": "^3.1.0",
+    "sass": "^1.24.4",
+    "sass-loader": "^7.3.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:@wordpress/eslint-plugin/recommended"
+    ],
+    "globals": {
+      "jQuery": true
+    }
+  },
+  "scripts": {
+    "serve": "live-server . --host=localhost --port=8080",
+    "dev": "yarn run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "yarn run development -- --watch",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "yarn run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "start": "wp-scripts start",
+    "build": "wp-scripts build"
+  }
+}

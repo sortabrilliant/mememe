@@ -1,0 +1,18 @@
+.editor-styles-wrapper {
+	.is-style-meme {
+		position: relative;
+		.editor-rich-text{
+			position: absolute;
+			bottom: 5%;
+			left: 0;
+			right: 0;
+		}
+		figcaption {
+			color: #ffffff;
+			text-align: center;
+			text-shadow: 0 0 4px #000000;
+			font-size: inherit;
+			font-family: 'Anton', Arial, Helvetica, sans-serif;
+		}
+	}
+}
