@@ -1,12 +1,26 @@
 .editor-styles-wrapper {
+	.has-meme-position-top {
+		.is-style-meme {
+			.editor-rich-text{
+				position: absolute;
+				top: 5%;
+				left: 0;
+				right: 0;
+			}
+		}
+	}
+	.has-meme-position-bottom {
+		.is-style-meme {
+			.editor-rich-text{
+				position: absolute;
+				bottom: 5%;
+				left: 0;
+				right: 0;
+			}
+		}
+	}
 	.is-style-meme {
 		position: relative;
-		.editor-rich-text{
-			position: absolute;
-			bottom: 5%;
-			left: 0;
-			right: 0;
-		}
 		figcaption {
 			color: #ffffff;
 			text-align: center;
@@ -14,5 +28,11 @@
 			font-size: inherit;
 			font-family: 'Anton', Arial, Helvetica, sans-serif;
 		}
+	}
+}
+
+.edit-post-sidebar {
+	.block-meme__position {
+		display: block;
 	}
 }
