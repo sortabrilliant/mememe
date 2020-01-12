@@ -1,8 +1,32 @@
 @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
 
-.is-style-meme {
-	figcaption {
-		text-align: center;
-		font-family: 'Anton', Arial, Helvetica, sans-serif;
+.wp-block-image{
+	&.is-style-meme {
+		position: relative;
+		figcaption {
+			color: #ffffff;
+			text-align: center;
+			text-shadow: 0 0 4px #000000;
+			font-size: inherit;
+			font-family: 'Anton', Arial, Helvetica, sans-serif;
+		}
+	}
+
+	&.has-meme-position-top {
+		figcaption {
+			position: absolute;
+			top: 5%;
+			left: 0;
+			right: 0;
+		}
+	}
+
+	&.has-meme-position-bottom {
+		figcaption {
+			position: absolute;
+			bottom: 5%;
+			left: 0;
+			right: 0;
+		}
 	}
 }

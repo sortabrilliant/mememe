@@ -102,6 +102,41 @@ const withMeme = createHigherOrderComponent( ( BlockListBlock ) => {
 }, 'withMeme' );
 
 /**
+ * Override props assigned to save component to inject meme attributes
+ *
+ * @param {Object} extraProps Additional props applied to save element.
+ * @param {Object} blockType  Block type.
+ * @param {Object} attributes Current block attributes.
+ *
+ * @return {Object} Filtered props applied to save element.
+ */
+function addMeme( extraProps, blockType, attributes ) {
+	if ( blockType.name !== 'core/image' ) {
+		return 	extraProps;
+	}
+
+	const {
+		memeTextPosition,
+		fontSize,
+		customFontSize,
+	} = attributes;
+
+	extraProps.style = assign(
+		extraProps.style,
+		{
+			fontSize: customFontSize ? customFontSize + 'px' : undefined,
+		} );
+
+	extraProps.className = classnames(
+		extraProps.className,
+		{ [ `has-meme-position-${ memeTextPosition }` ]: memeTextPosition },
+		{ [ `has-${ fontSize }-font-size` ]: fontSize }
+	);
+
+	return extraProps;
+}
+
+/**
  * Add hooks
  */
 addFilter(
@@ -120,4 +155,10 @@ addFilter(
 	'editor.BlockListBlock',
 	'sb/meme/withMeme',
 	withMeme
+);
+
+addFilter(
+	'blocks.getSaveContent.extraProps',
+	'sb/mememe/addMeme',
+	addMeme
 );
