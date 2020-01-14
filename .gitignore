@@ -33,9 +33,5 @@ nbproject
 intermediate
 cache
 node_modules
-vendor
-
-# Build Files to ignore
-*.pot
-**/*.min.*
-build
+vendor/*
+!vendor/autoload.php
