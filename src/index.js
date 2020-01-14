@@ -58,7 +58,7 @@ const withInspectorControl = createHigherOrderComponent( ( BlockEdit ) => {
 
 		return (
 			<Fragment>
-				{ props.isSelected && <MemeInspector { ...{ ...props } } /> }
+				{ props.isSelected && props.attributes.className.includes( 'meme' ) && <MemeInspector { ...{ ...props } } /> }
 				<BlockEdit { ...props } />
 			</Fragment>
 		);
@@ -79,24 +79,16 @@ const withMeme = createHigherOrderComponent( ( BlockListBlock ) => {
 
 		const {
 			memeTextPosition,
-			fontSize,
-			customFontSize,
+			memeTextSize,
 		} = props.attributes;
-
-		const memeProps = {
-			style: {
-				fontSize: customFontSize ? customFontSize + 'px' : undefined,
-			},
-		};
 
 		return (
 			<BlockListBlock
 				{ ...props }
 				className={ classnames(
 					{ [ `has-meme-position-${ memeTextPosition }` ]: memeTextPosition },
-					{ [ `has-${ fontSize }-font-size` ]: fontSize }
-				) }
-				wrapperProps={ memeProps } />
+					{ [ `has-meme-text-${ memeTextSize }` ]: memeTextSize }
+				) } />
 		);
 	};
 }, 'withMeme' );
@@ -117,23 +109,19 @@ function addMeme( extraProps, blockType, attributes ) {
 
 	const {
 		memeTextPosition,
-		fontSize,
-		customFontSize,
+		memeTextSize,
 	} = attributes;
 
-	extraProps.style = assign(
-		extraProps.style,
-		{
-			fontSize: customFontSize ? customFontSize + 'px' : undefined,
-		} );
-
-	extraProps.className = classnames(
-		extraProps.className,
-		{ [ `has-meme-position-${ memeTextPosition }` ]: memeTextPosition },
-		{ [ `has-${ fontSize }-font-size` ]: fontSize }
+	const memeProps = assign(
+		extraProps,
+		{ className: classnames(
+			extraProps.className,
+			{ [ `has-meme-position-${ memeTextPosition }` ]: memeTextPosition },
+			{ [ `has-meme-text-${ memeTextSize }` ]: memeTextSize }
+		) }
 	);
 
-	return extraProps;
+	return memeProps;
 }
 
 /**

@@ -5,16 +5,13 @@ import {
 	BaseControl,
 	Button,
 	ButtonGroup,
+	SelectControl,
 	PanelBody,
 } from '@wordpress/components';
 
 import {
 	InspectorControls,
-	FontSizePicker,
-	withFontSizes,
 } from '@wordpress/block-editor';
-
-import { compose } from '@wordpress/compose';
 
 /**
  * Inspector Component.
@@ -22,9 +19,40 @@ import { compose } from '@wordpress/compose';
  * @param {Object} props component props
  * @return {Object} Component
  */
-const Inspector = ( props ) => {
-	const { attributes, setAttributes, fontSize, setFontSize } = props;
-	const { memeTextPosition } = attributes;
+const MemeInspector = ( props ) => {
+	const { attributes, setAttributes } = props;
+	const { memeTextPosition, memeTextSize, className } = attributes;
+
+	const fontSizes = [
+		{
+			label: 'Large',
+			value: 'lg',
+		},
+		{
+			label: 'Extra Large',
+			value: 'xl',
+		},
+		{
+			label: '2 Extra Large',
+			value: '2xl',
+		},
+		{
+			label: '3 Extra Large',
+			value: '3xl',
+		},
+		{
+			label: '4 Extra Large',
+			value: '4xl',
+		},
+		{
+			label: '5 Extra Large',
+			value: '5xl',
+		},
+		{
+			label: '6 Extra Large',
+			value: '6xl',
+		},
+	];
 
 	return (
 		<InspectorControls>
@@ -50,17 +78,15 @@ const Inspector = ( props ) => {
 					</ButtonGroup>
 				</BaseControl>
 
-				<FontSizePicker
-					value={ fontSize.size }
-					onChange={ setFontSize }
+				<SelectControl
+					options={ fontSizes }
+					label="Text Size"
+					value={ memeTextSize }
+					onChange={ ( newSize ) => setAttributes( { memeTextSize: newSize } ) }
 				/>
 			</PanelBody>
 		</InspectorControls>
 	);
 };
-
-const MemeInspector = compose( [
-	withFontSizes( 'fontSize' ),
-] )( Inspector );
 
 export default MemeInspector;

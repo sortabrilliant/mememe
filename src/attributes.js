@@ -6,6 +6,10 @@ const memeSettings = {
 		type: 'string',
 		default: 'bottom',
 	},
+	memeTextSize: {
+		type: 'string',
+		default: 'large',
+	},
 };
 
 export default memeSettings;
