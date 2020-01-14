@@ -33,5 +33,5 @@ nbproject
 intermediate
 cache
 node_modules
-vendor/*
-!vendor/autoload.php
+/vendor/*
+!/vendor/autoload.php
