@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Meme Me
  * Plugin URI: https://sortabrilliant.com/mememe/
- * Description: Convert your regualr images into meme.
+ * Description: Convert your regular images into meme.
  * Author: sorta brilliant
  * Author URI: https://sortabrilliant.com
  * Version: 1.0.0
@@ -18,7 +18,7 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 /**
- * Setup Constants
+ * Setup Constants.
  */
 // Plugin version.
 if ( ! defined( 'MEMEME_VERSION' ) ) {

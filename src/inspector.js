@@ -21,7 +21,7 @@ import {
  */
 const MemeInspector = ( props ) => {
 	const { attributes, setAttributes } = props;
-	const { memeTextPosition, memeTextSize, className } = attributes;
+	const { memeTextPosition, memeTextSize } = attributes;
 
 	const fontSizes = [
 		{

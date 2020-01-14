@@ -68,9 +68,6 @@ class SB_MemeMe {
 	 * @return void
 	 */
 	public function register_block() {
-		// Attributes.
-		$block_attributes = [];
-
 		// Assets.
 		$asset_file = include MEMEME_PLUGIN_PATH . '/build/index.asset.php';
 

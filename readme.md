@@ -13,13 +13,13 @@ Turn your regular images into meme
 
 - `composer install` 
 - `yarn install`
-- `yarn dev`
+- `yarn start`
 
 ## Production
 
 - `composer install --no-dev`
 - `yarn install`
-- `yarn prod`
+- `yarn build`
 
 ## Docker
 Start local docker container
