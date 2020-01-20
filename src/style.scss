@@ -5,10 +5,11 @@
 		position: relative;
 		figcaption {
 			color: #ffffff;
-			text-align: center;
+			text-align: center !important;
 			text-shadow: 0 0 4px #000000;
-			font-size: inherit;
-			font-family: 'Anton', Arial, Helvetica, sans-serif;
+			font-style: normal !important;
+			font-size: inherit !important;
+			font-family: 'Anton', Arial, Helvetica, sans-serif !important;
 		}
 	}
 
@@ -32,29 +33,29 @@
 }
 
 .has-meme-text-lg {
-	font-size: 1.125rem;
+	font-size: 1.125rem !important;
 }
 
 .has-meme-text-xl {
-	font-size: 1.25rem;
+	font-size: 1.25rem !important;
 }
 
 .has-meme-text-2xl {
-	font-size: 1.5rem;
+	font-size: 1.5rem !important;
 }
 
 .has-meme-text-3xl {
-	font-size: 1.875rem;
+	font-size: 1.875rem !important;
 }
 
 .has-meme-text-4xl {
-	font-size: 2.25rem;
+	font-size: 2.25rem !important;
 }
 
 .has-meme-text-5xl {
-	font-size: 3rem;
+	font-size: 3rem !important;
 }
 
 .has-meme-text-6xl {
-	font-size: 4rem;
+	font-size: 4rem !important;
 }
