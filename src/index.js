@@ -58,7 +58,7 @@ const withInspectorControl = createHigherOrderComponent( ( BlockEdit ) => {
 
 		return (
 			<Fragment>
-				{ props.isSelected && <MemeInspector { ...{ ...props } } /> }
+				{ props.isSelected && props.attributes.className.includes( 'is-style-meme' ) && <MemeInspector { ...{ ...props } } /> }
 				<BlockEdit { ...props } />
 			</Fragment>
 		);
