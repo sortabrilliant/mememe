@@ -35,7 +35,7 @@
     "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
     "prod": "yarn run production",
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "start": "wp-scripts start && yarn run prod",
-    "build": "wp-scripts build && yarn run watch"
+    "start": "wp-scripts start && yarn run watch",
+    "build": "wp-scripts build && yarn run prod"
   }
 }

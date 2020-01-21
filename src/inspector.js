@@ -25,32 +25,20 @@ const MemeInspector = ( props ) => {
 
 	const fontSizes = [
 		{
+			label: 'Small',
+			value: 's',
+		},
+		{
+			label: 'Medium',
+			value: 'm',
+		},
+		{
 			label: 'Large',
 			value: 'lg',
 		},
 		{
 			label: 'Extra Large',
 			value: 'xl',
-		},
-		{
-			label: '2 Extra Large',
-			value: '2xl',
-		},
-		{
-			label: '3 Extra Large',
-			value: '3xl',
-		},
-		{
-			label: '4 Extra Large',
-			value: '4xl',
-		},
-		{
-			label: '5 Extra Large',
-			value: '5xl',
-		},
-		{
-			label: '6 Extra Large',
-			value: '6xl',
 		},
 	];
 
