@@ -57,9 +57,9 @@ const MemeInspector = ( props ) => {
 	return (
 		<InspectorControls>
 			<PanelBody title="Meme Settings" initialOpen={ true }>
-				<BaseControl id="meme-position" label="Text Position">
+				<BaseControl id="meme-position" label="Caption Position">
 					<ButtonGroup
-						aria-label="Text Position"
+						aria-label="Caption Position"
 						className="block-meme__position">
 						<Button
 							isLarge
@@ -80,7 +80,7 @@ const MemeInspector = ( props ) => {
 
 				<SelectControl
 					options={ fontSizes }
-					label="Text Size"
+					label="Caption Size"
 					value={ memeTextSize }
 					onChange={ ( newSize ) => setAttributes( { memeTextSize: newSize } ) }
 				/>
