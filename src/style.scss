@@ -11,23 +11,22 @@
 			font-size: inherit !important;
 			font-family: 'Anton', Arial, Helvetica, sans-serif !important;
 		}
-	}
-
-	&.has-meme-position-top {
-		figcaption {
-			position: absolute;
-			top: 5%;
-			left: 0;
-			right: 0;
+		&.has-meme-position-top {
+			figcaption {
+				position: absolute;
+				top: 5%;
+				left: 0;
+				right: 0;
+			}
 		}
-	}
 
-	&.has-meme-position-bottom {
-		figcaption {
-			position: absolute;
-			bottom: 5%;
-			left: 0;
-			right: 0;
+		&.has-meme-position-bottom {
+			figcaption {
+				position: absolute;
+				bottom: 5%;
+				left: 0;
+				right: 0;
+			}
 		}
 	}
 }
