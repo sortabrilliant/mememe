@@ -52,7 +52,7 @@ use SortaBrilliant\MemeMe\MemeMe;
  *
  * Returns the main instance of Wpccp to prevent the need to use globals.
  *
- * @since 2.0.0
+ * @since 1.0.0
  * @return MemeMe
  */
 function meme_me() {
