@@ -1,30 +1,22 @@
-=== Meme Me ===
-
-Contributors:      sorta brilliant
-Donate link:       https://sortabrilliant.com
-Tags:              gutenberg, block, meme
+=== Meme me ===
+Contributors: sortabrilliant, ajitbohra
+Tags: meme, block
 Requires at least: 5.0
-Tested up to:      5.3
-Stable tag:        1.0.0
-License:           GPLv2 or Later
-License URI: 	   http://www.gnu.org/licenses/gpl-2.0.txt
+Tested up to: 5.3.2
+Requires PHP: 5.6
+Stable tag: 1.0.0
+License: GPL-2.0-or-later
+License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
-Turn your regular images into meme
+Turn your regular images into memes.
 
 == Description ==
-Turn your regular images into meme
+Making memes is hard. You have to use Photoshop, find the right font, ugh. If you think of something more clever you have to start the process all over again. 
 
-== Installation ==
-
-1. Download the .zip file
-2. Upload and extract the contents of the zip file to your `wp-content/plugins/` folder
-3. Activate the plugin
-4. Enjoy!
-
-== Upgrade Notice ==
+There has to be a better way. There is, it's Meme me. Meme me add a custom meme style to the core image block. Just select the style, add your caption and you have a meme that will impress all your friends.
 
 == Screenshots ==
-
-== Frequently Asked Questions ==
+1. Turn any of your images into memes, instantly. 
 
 == Changelog ==
+1.0.0 Initial Commit
