@@ -1,37 +1,16 @@
 # MemeMe
 
-Turn your regular images into meme
+Making memes is hard. You have to use Photoshop, find the right font, ugh. And if you think of something better you have to start the process all over again.
 
-## Installation
+There has to be a better way. There is, it's Meme Me. Meme Me adds a custom meme style to the core image block. Just select the style, add your caption and you have a meme that will impress all your friends.
 
-1. Download the .zip file
-2. Upload and extract the contents of the zip file to your `wp-content/plugins/` folder
-3. Activate the plugin
-4. Enjoy!
+#### Customization
+Meme Me offers a few customizations options:
 
-## Development
+* **Placement:** You can control if you want your text at the top or bottom of the image.
+* **Font Size:** You're in control, make your caption as big or small as you like.
 
-- `composer install` 
-- `yarn install`
-- `yarn start`
+#### I like this, who made it?
+This plugin is brought to you by [sorta brilliant](https://sortabrilliant.com/) and [block garden](https://block.garden).
 
-## Production
-
-- `composer install --no-dev`
-- `yarn install`
-- `yarn build`
-
-## Docker
-Start local docker container
-
-`docker-compose up -d` 
-
-Pause docker container
-
-`docker-compose stop` 
-
-Stop and remove docker container
-
-`docker-compose down` 
-
-Access url: http://localhost:9999
+![meme](https://ps.w.org/meme-me/assets/screenshot-1.gif?rev=2236749 "meme")
